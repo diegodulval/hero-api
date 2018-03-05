@@ -1,4 +1,4 @@
-package com.dulval.demo.herodiscovery.herodiscovery;
+package com.dulval.demo.herodiscovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
