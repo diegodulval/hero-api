@@ -1,9 +1,11 @@
+server.port: 9601
+
 spring:
   application.name: hero-api
   cloud.config:
     discovery:
       enabled: true
-      serviceId: config-server
+      serviceId: hero-config
 
 eureka:
   client:
