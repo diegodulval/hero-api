@@ -1,0 +1,13 @@
+server.port: 8001
+
+spring:
+  application.name: hero-config
+  cloud.config.server.git.uri: https://github.com/diegodulval/hero-demo-config.git 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+    registryFetchIntervalSeconds: 1
+  instance:
+    leaseRenewalIntervalInSeconds: 1
