@@ -1,4 +1,4 @@
-package com.dulval.demo.heroapp.heroapp;
+package com.dulval.demo.heroapp;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.config.MapAttributeConfig;
@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.config.EnableHypermediaSupport;
 import org.springframework.session.hazelcast.HazelcastSessionRepository;
 import org.springframework.session.hazelcast.PrincipalNameExtractor;
+import org.springframework.session.hazelcast.config.annotation.web.http.EnableHazelcastHttpSession;
 import org.springframework.session.web.http.CookieSerializer;
 import org.springframework.session.web.http.DefaultCookieSerializer;
 
@@ -25,6 +26,7 @@ import org.springframework.session.web.http.DefaultCookieSerializer;
 @EnableCircuitBreaker
 @EnableFeignClients
 @EnableHypermediaSupport(type = EnableHypermediaSupport.HypermediaType.HAL)
+@EnableHazelcastHttpSession
 public class HeroAppApplication {
 
     @Value("${hazelcast.max.no.heartbeat.seconds:60}")
@@ -37,7 +39,7 @@ public class HeroAppApplication {
     @Bean
     public ServletRegistrationBean<SpringVaadinServlet> springVaadinServlet() {
         SpringVaadinServlet servlet = new SpringVaadinServlet();
-        ServletRegistrationBean<SpringVaadinServlet> registrationBean = new ServletRegistrationBean<>(servlet, "/companies/*");
+        ServletRegistrationBean<SpringVaadinServlet> registrationBean = new ServletRegistrationBean<>(servlet, "/heroes/*");
         registrationBean.setLoadOnStartup(1);
         registrationBean.setName("VaadinServlet");
         return registrationBean;

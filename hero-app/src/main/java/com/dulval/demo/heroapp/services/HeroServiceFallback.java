@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dulval.demo.heroapp.heroapp.services;
+package com.dulval.demo.heroapp.services;
 
-import com.dulval.demo.heroapp.heroapp.domain.Hero;
+import com.dulval.demo.heroapp.domain.Hero;
 import org.springframework.hateoas.Resources;
 import org.springframework.stereotype.Service;
 

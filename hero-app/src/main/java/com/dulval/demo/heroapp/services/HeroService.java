@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dulval.demo.heroapp.heroapp.services;
+package com.dulval.demo.heroapp.services;
 
-import com.dulval.demo.heroapp.heroapp.domain.Hero;
+import com.dulval.demo.heroapp.domain.Hero;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Primary;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author diego
  */
-@FeignClient(value = "${hero-api.name:null}", url = "${hero-api.url:}", fallback = HeroServiceFallback.class)
+@FeignClient(value = "${hero-api.name:null}", url = "${hero-api.url:http://localhost:9601}", fallback = HeroServiceFallback.class)
 @Primary
 public interface HeroService {
 

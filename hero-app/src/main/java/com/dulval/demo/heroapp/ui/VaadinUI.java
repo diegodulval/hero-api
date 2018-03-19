@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dulval.demo.heroapp.heroapp.ui;
+package com.dulval.demo.heroapp.ui;
 
-import com.dulval.demo.heroapp.heroapp.domain.Hero;
-import com.dulval.demo.heroapp.heroapp.services.HeroService;
-import com.dulval.demo.heroapp.heroapp.services.Services;
+import com.dulval.demo.heroapp.domain.Hero;
+import com.dulval.demo.heroapp.services.Services;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.Label;
