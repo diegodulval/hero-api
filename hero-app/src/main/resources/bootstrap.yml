@@ -3,7 +3,7 @@ spring:
   cloud.config:
     discovery:
       enabled: true
-      serviceId: config-server
+      serviceId: hero-config
 
 eureka:
   client:
